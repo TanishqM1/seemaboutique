@@ -1,25 +1,21 @@
 import React from 'react';
-import styled from 'styled-components'; // Ensure styled-components is installed
+import Navbar from './components/Navbar'; // Adjust the path based on your file structure
+import styled from 'styled-components';
 
-const HomePage = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-`;
-
-const WelcomeText = styled.h1`
-  color: #333;
-  font-size: 2rem;
+const Container = styled.div`
+  margin-top: 80px; // Offset for the fixed navbar
+  padding: 2rem;
 `;
 
 function App() {
   return (
-    <HomePage>
-      <WelcomeText>Welcome to Seema Designer Boutique</WelcomeText>
-    </HomePage>
+    <>
+      <Navbar />
+      <Container>
+        <h1>Welcome to Seema Designer Boutique</h1>
+        <p>This is the homepage content.</p>
+      </Container>
+    </>
   );
 }
 
