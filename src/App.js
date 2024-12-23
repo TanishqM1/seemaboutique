@@ -1,5 +1,10 @@
 import React from 'react';
-import Navbar from './components/Navbar'; // Adjust the path based on your file structure
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Router components
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Gallery from './components/Gallery';
+import About from './components/About';
+import Inquire from './components/Inquire';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -9,13 +14,17 @@ const Container = styled.div`
 
 function App() {
   return (
-    <>
+    <Router> {/* Wrap everything in Router to enable routing */}
       <Navbar />
       <Container>
-        <h1>Welcome to Seema Designer Boutique</h1>
-        <p>This is the homepage content.</p>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/inquire" element={<Inquire />} />
+        </Routes>
       </Container>
-    </>
+    </Router>
   );
 }
 
