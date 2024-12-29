@@ -1,5 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 // Importing the Great Vibes font from Google Fonts
 const GlobalStyle = createGlobalStyle`
@@ -28,33 +30,22 @@ const LogoContainer = styled.div`
   flex: 0.5;
   display: flex;
   flex-direction: column;
-  align-items: center; // Center the logo and buttons
+  align-items: center; // Center the logo and icons
   img {
     max-width: 150px; // Set a maximum size for the logo
     height: auto;
-    margin-bottom: 1rem; // Space between the logo and buttons
+    margin-bottom: 1rem; // Space between the logo and icons
   }
 `;
 
-const ButtonContainer = styled.div`
+const SocialIconsContainer = styled.div`
   display: flex;
-  gap: 1rem; // Space between the buttons
-`;
-
-const SocialButton = styled.a`
-  display: inline-block;
-  background-color: pink;
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  width: 100px; // Fixed width for consistency
-
-  &:hover {
-    background-color: #ff99cc;
+  gap: 1.5rem; // Space between the icons
+  a {
+    font-size: 2rem; // Adjust icon size
+    &:hover {
+      opacity: 0.8; // Add hover effect for subtle feedback
+    }
   }
 `;
 
@@ -107,14 +98,14 @@ const Footer = () => {
           {/* Left container for the logo */}
           <LogoContainer>
             <img src="/path/to/your/logo.png" alt="Seema Designer Boutique Logo" />
-            <ButtonContainer>
-              <SocialButton href="https://www.instagram.com/seemamehtaofficial/" target="_blank" rel="noopener noreferrer">
-                Instagram
-              </SocialButton>
-              <SocialButton href="https://www.facebook.com/seema.mehta.982/" target="_blank" rel="noopener noreferrer">
-                Facebook
-              </SocialButton>
-            </ButtonContainer>
+            <SocialIconsContainer>
+              <a href="https://www.facebook.com/seema.mehta.982/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faFacebook} style={{ color: '#4267B2' }} />
+              </a>
+              <a href="https://www.instagram.com/seemamehtaofficial/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faInstagram} style={{ color: '#E1306C' }} />
+              </a>
+            </SocialIconsContainer>
           </LogoContainer>
 
           {/* Middle container for Quick Links */}
