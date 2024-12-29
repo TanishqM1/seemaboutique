@@ -19,8 +19,10 @@ const LogoContainer = styled.div`
 
 const Title = styled.h1`
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-family: 'Great Vibes', cursive;
+  margin-top: 8rem;
 `;
 
 const WorkSection = styled.div`
@@ -63,7 +65,7 @@ const Gallery = () => {
       </LogoContainer>
 
       {/* Title */}
-      <Title>Past Work</Title>
+      <Title>Highlights</Title>
 
       {/* Rows of Work */}
       <WorkSection>
