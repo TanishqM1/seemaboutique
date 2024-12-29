@@ -11,26 +11,50 @@ const FooterContainer = styled.footer`
   padding: 2rem;
   border-top: 3px solid pink;
   display: flex;
-  justify-content: center;  // Center all items horizontally
+  justify-content: center; // Center all items horizontally
   align-items: center;
   width: 100%;
-  box-sizing: border-box;  // Ensures padding doesn't affect the width of the container
+  box-sizing: border-box; // Ensures padding doesn't affect the width of the container
 `;
 
 const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 80%;  // Increased width to allow more space between sections
+  width: 80%; // Increased width to allow more space between sections
   align-items: flex-start;
 `;
 
 const LogoContainer = styled.div`
   flex: 0.5;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center; // Center the logo and buttons
   img {
-    max-width: 150px;  // Set a maximum size for the logo
+    max-width: 150px; // Set a maximum size for the logo
     height: auto;
+    margin-bottom: 1rem; // Space between the logo and buttons
+  }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 1rem; // Space between the buttons
+`;
+
+const SocialButton = styled.a`
+  display: inline-block;
+  background-color: pink;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100px; // Fixed width for consistency
+
+  &:hover {
+    background-color: #ff99cc;
   }
 `;
 
@@ -38,10 +62,10 @@ const QuickLinks = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;  // Center the quick links section
+  align-items: center; // Center the quick links section
   h3 {
-    font-family: 'Great Vibes', cursive;  // Apply Great Vibes cursive font here
-    font-size: 2rem;  // Larger font for the titles
+    font-family: 'Great Vibes', cursive; // Apply Great Vibes cursive font here
+    font-size: 2rem; // Larger font for the titles
     margin-bottom: 1rem;
   }
   a {
@@ -49,7 +73,7 @@ const QuickLinks = styled.div`
     text-decoration: none;
     display: block;
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;  // Larger font for the links
+    font-size: 1.1rem; // Larger font for the links
     &:hover {
       color: black;
     }
@@ -60,16 +84,16 @@ const Information = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;  // Center the information section
+  align-items: center; // Center the information section
   h3 {
-    font-family: 'Great Vibes', cursive;  // Apply Great Vibes cursive font here
-    font-size: 2rem;  // Larger font for the titles
+    font-family: 'Great Vibes', cursive; // Apply Great Vibes cursive font here
+    font-size: 2rem; // Larger font for the titles
     margin-bottom: .2rem;
   }
   p {
     color: gray;
-    margin-bottom: -.2rem;  // Reduce gap between each line of text
-    font-size: 1.1rem;  // Slightly larger text
+    margin-bottom: -.2rem; // Reduce gap between each line of text
+    font-size: 1.1rem; // Slightly larger text
     text-align: center;
   }
 `;
@@ -83,6 +107,14 @@ const Footer = () => {
           {/* Left container for the logo */}
           <LogoContainer>
             <img src="/path/to/your/logo.png" alt="Seema Designer Boutique Logo" />
+            <ButtonContainer>
+              <SocialButton href="https://www.instagram.com/seemamehtaofficial/" target="_blank" rel="noopener noreferrer">
+                Instagram
+              </SocialButton>
+              <SocialButton href="https://www.facebook.com/seema.mehta.982/" target="_blank" rel="noopener noreferrer">
+                Facebook
+              </SocialButton>
+            </ButtonContainer>
           </LogoContainer>
 
           {/* Middle container for Quick Links */}
