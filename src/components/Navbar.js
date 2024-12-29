@@ -33,7 +33,7 @@ const NavButton = styled(Link)`
   transition: color 0.3s ease;
 
   &:hover {
-    color: white;
+    color: pink;
   }
 `;
 
