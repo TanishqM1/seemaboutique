@@ -38,6 +38,7 @@ const ReviewCard = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +64,7 @@ const ReviewText = styled.p`
   font-size: 1.1rem;  /* Slightly increase font size */
   color: #555;
   margin-bottom: 1rem;
-  max-height: 120px;  /* Increase max height to allow more text */
+  max-height: 200px;  /* Increase max height to allow more text */
   overflow-y: auto;   /* Add scroll if text overflows */
 `;
 
