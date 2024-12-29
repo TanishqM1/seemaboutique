@@ -67,7 +67,7 @@ const Home = () => {
       {/* Content Section with Description and Image */}
       <ContentSection>
         <Description>
-          <h2>About Seema Designer Boutique</h2>
+          <h2>Seema Designer Boutique</h2>
           <p>Seema Designer Boutique is a premier fashion destination offering high-quality, handcrafted apparel.</p>
           <p>We provide a wide variety of outfits for every occasion, carefully curated with the latest trends in mind.</p>
           <p>Visit us to experience personalized fashion that suits your unique style!</p>

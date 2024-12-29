@@ -1,5 +1,22 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import picture from '../imgs/boutiquepic.jpg';
+
+//Customer icons for reviews
+import soni from '../imgs/soni.png';
+import gurpreet from '../imgs/gurpreet.png';
+import amnit from '../imgs/amnit.png';
+import aman from '../imgs/aman.png';
+import kanwaljit from '../imgs/kanwaljit.png';
+import kiran from '../imgs/kiran.png';
+import nabhi from '../imgs/nabhi.png';
+import nav from '../imgs/nav.png';
+import nihit from '../imgs/nihit.png';
+import nikita from '../imgs/nikita.png';
+import parveer from '../imgs/parveer.png';
+import sapna from '../imgs/sapna.png';
+
+
 
 // Styled components
 const ReviewCarouselContainer = styled.div`
@@ -13,7 +30,7 @@ const ReviewCarouselContainer = styled.div`
 
 const CarouselTitle = styled.h2`
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   font-family: 'Great Vibes', cursive;
 `;
@@ -47,12 +64,19 @@ const ReviewCard = styled.div`
 `;
 
 const ReviewerIcon = styled.div`
-  background-color: transparent;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  overflow: hidden;  // Make sure the image fits the circle
 `;
+
+const IconImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 
 const ReviewerName = styled.h3`
   font-size: 1.2rem;
@@ -100,20 +124,19 @@ const Button = styled.button`
 `;
 
 const reviews = [
-    { id: 1, name: 'Soni Sadhra', rating: 5, review: 'I’m never disappointed with Seema and her team. The outfits are always perfectly tailored to my needs and the customer service is top-notch!', icon: '' },
-    { id: 2, name: 'Gurpreet Khangura', rating: 5, review: 'The outfits made are so beautiful and unique. I love the attention to detail and how everything is made to fit perfectly. Highly recommend!', icon: '' },
-    { id: 3, name: 'Amnit Dhaliwal', rating: 5, review: 'I had the best experience here. The team took the time to understand my preferences, and the final design exceeded all expectations. Truly professional and talented!', icon: '' },
-    { id: 4, name: 'Nikita Budwal', rating: 5, review: 'Had the best experience working with Seema and her team! They listened to all my ideas and made my vision come to life. Absolutely love my outfits!', icon: '' },
-    { id: 5, name: 'Kanwaljit Bains', rating: 5, review: 'We had a great experience, and it was all run like clockwork. The team worked around our schedule and delivered beyond expectations. Will definitely be back for more!', icon: '' },
-    { id: 6, name: 'Parveer Hundal', rating: 5, review: 'After searching at ready-made boutiques, I found Seema’s team. The outfits were exactly what I was looking for, and the service was impeccable. So glad I found them!', icon: '' },
-    { id: 7, name: 'Sapna. B', rating: 5, review: 'I gave Seema and her team a very short time frame to create my outfits, and they delivered perfectly on time. The outfits fit like a glove and the quality is outstanding!', icon: '' },
-    { id: 8, name: 'Aman. Parmar', rating: 5, review: 'Seema and her team were kind and respectful throughout the process. They took my ideas seriously and made suggestions that made the outfits even better than I had imagined!', icon: '' },
-    { id: 9, name: 'Nabhi Johal', rating: 5, review: 'Seema provides great customer service and really knows her craft. The outfits were stunning, and she made sure everything was perfect. Highly recommend for any special occasion!', icon: '' },
-    { id: 10, name: 'Nav Nijjar', rating: 5, review: 'Seema did an amazing job with our family outfits. She tailored everything to our needs, and we all felt so comfortable and stylish. Will definitely return for future events!', icon: '' },
-    { id: 11, name: 'Kiran', rating: 5, review: 'Seema was able to design something above and beyond what I expected. The outfits were elegant and comfortable, and the whole experience was seamless!', icon: '' },
-    { id: 12, name: 'Nihit Malhotra', rating: 5, review: 'Today me and my wife went there and received a great customer service. They have a good collection of suits and sarees in store at a reasonable price. Kudos to Seema.', icon: '' }
-  ];
-  
+    { id: 1, name: 'Nikita Budwal', rating: 5, review: 'Had the best experience working with Seema and her team! They listened to all my ideas and made my vision come to life. Absolutely love my outfits!', icon: nikita },
+    { id: 2, name: 'Nav Nijjar', rating: 5, review: 'Seema did an amazing job with our family outfits. She tailored everything to our needs, and we all felt so comfortable and stylish. Will definitely return for future events!', icon: nav },
+    { id: 3, name: 'Nihit Malhotra', rating: 5, review: 'Today me and my wife went there and received a great customer service. They have a good collection of suits and sarees in store at a reasonable price. Kudos to Seema.', icon: nihit },
+    { id: 4, name: 'Soni Sadhra', rating: 5, review: 'I’m never disappointed with Seema and her team. The outfits are always perfectly tailored to my needs and the customer service is top-notch!', icon: soni },
+    { id: 5, name: 'Gurpreet Khangura', rating: 5, review: 'The outfits made are so beautiful and unique. I love the attention to detail and how everything is made to fit perfectly. Highly recommend!', icon: gurpreet },
+    { id: 6, name: 'Amnit Dhaliwal', rating: 5, review: 'I had the best experience here. The team took the time to understand my preferences, and the final design exceeded all expectations. Truly professional and talented!', icon: amnit },
+    { id: 7, name: 'Kanwaljit Bains', rating: 5, review: 'We had a great experience, and it was all run like clockwork. The team worked around our schedule and delivered beyond expectations. Will definitely be back for more!', icon: kanwaljit },
+    { id: 8, name: 'Parveer Hundal', rating: 5, review: 'After searching at ready-made boutiques, I found Seema’s team. The outfits were exactly what I was looking for, and the service was impeccable. So glad I found them!', icon: parveer },
+    { id: 9, name: 'Sapna. B', rating: 5, review: 'I gave Seema and her team a very short time frame to create my outfits, and they delivered perfectly on time. The outfits fit like a glove and the quality is outstanding!', icon: sapna },
+    { id: 10, name: 'Aman. Parmar', rating: 5, review: 'Seema and her team were kind and respectful throughout the process. They took my ideas seriously and made suggestions that made the outfits even better than I had imagined!', icon: aman },
+    { id: 11, name: 'Nabhi Johal', rating: 5, review: 'Seema provides great customer service and really knows her craft. The outfits were stunning, and she made sure everything was perfect. Highly recommend for any special occasion!', icon: nabhi },
+    { id: 12, name: 'Kiran', rating: 5, review: 'Seema was able to design something above and beyond what I expected. The outfits were elegant and comfortable, and the whole experience was seamless!', icon: kiran }
+];
 
 const ReviewCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -140,17 +163,19 @@ const ReviewCarousel = () => {
         <ReviewCardContainer>
           {/* Show 2 reviews at a time */}
           {getDisplayedReviews().map((review) => (
-            <ReviewCard key={review.id}>
-              <ReviewerIcon></ReviewerIcon>
-              <ReviewerName>{review.name}</ReviewerName>
-              <StarRating>
-                {[...Array(5)].map((_, index) => (
-                  <Star key={index} filled={index < review.rating}>&#9733;</Star>
-                ))}
-              </StarRating>
-              <ReviewText>{review.review}</ReviewText>
-            </ReviewCard>
-          ))}
+  <ReviewCard key={review.id}>
+    <ReviewerIcon>
+      <IconImage src={review.icon || picture} alt={review.name} />  {/* Render the image */}
+    </ReviewerIcon>
+    <ReviewerName>{review.name}</ReviewerName>
+    <StarRating>
+      {[...Array(5)].map((_, index) => (
+        <Star key={index} filled={index < review.rating}>&#9733;</Star>
+      ))}
+    </StarRating>
+    <ReviewText>{review.review}</ReviewText>
+  </ReviewCard>
+))}
         </ReviewCardContainer>
 
         <ButtonContainer>
