@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReviewCarousel from '../components/Review'; // Import the ReviewCarousel component
 
 // Styled components
 const PageContainer = styled.div`
@@ -80,6 +81,9 @@ const Home = () => {
 
       {/* Second Image Section */}
       <SecondImage aria-label="Fashion collection at Seema Designer Boutique" />
+
+      {/* Review Carousel Section */}
+      <ReviewCarousel />
     </PageContainer>
   );
 };
