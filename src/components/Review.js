@@ -66,6 +66,7 @@ const ReviewText = styled.p`
   margin-bottom: 1rem;
   max-height: 200px;  /* Increase max height to allow more text */
   overflow-y: auto;   /* Add scroll if text overflows */
+  text-align: center;
 `;
 
 const StarRating = styled.div`
