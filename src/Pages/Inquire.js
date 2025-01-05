@@ -14,6 +14,41 @@ const Title = styled.h1`
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
   margin-bottom: 2rem;
+  text-align: center;
+`;
+
+const DescriptionContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+`;
+
+const Image = styled.img`
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const DescriptionText = styled.div`
+  flex: 1;
+  font-size: 1.2rem;
+  color: #555;
+
+  p {
+    margin: 0;
+  }
 `;
 
 const Form = styled.form`
@@ -22,6 +57,7 @@ const Form = styled.form`
   width: 100%;
   max-width: 600px;
   gap: 1rem;
+  margin-bottom: 3rem;
 `;
 
 const Row = styled.div`
@@ -79,6 +115,31 @@ const SubmitButton = styled.button`
   }
 `;
 
+const FAQSection = styled.div`
+  width: 100%;
+  max-width: 900px;
+  margin-top: 3rem;
+`;
+
+const FAQTitle = styled.h2`
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+`;
+
+const Question = styled.h3`
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+`;
+
+const Answer = styled.p`
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+`;
+
 function Inquire() {
   const [formData, setFormData] = useState({
     name: '',
@@ -114,7 +175,17 @@ function Inquire() {
 
   return (
     <InquireContainer>
-      <Title>Inquire</Title>
+      <DescriptionContainer>
+        <DescriptionText>
+          <Title>Inquire</Title>
+          <p>
+            Welcome to our Inquire page! Feel free to reach out with any questions, concerns, 
+            or to inquire about an order. We are here to help and look forward to hearing from you.
+          </p>
+        </DescriptionText>
+        <Image src="/path-to-your-image.jpg" alt="Inquire" />
+      </DescriptionContainer>
+
       <Form onSubmit={handleSubmit}>
         <Row>
           <Input
@@ -150,6 +221,18 @@ function Inquire() {
         />
         <SubmitButton type="submit">Send</SubmitButton>
       </Form>
+
+      <FAQSection>
+        <FAQTitle>Frequently Asked Questions</FAQTitle>
+        <Question>1. How do I place an order?</Question>
+        <Answer>You can place an order by contacting us through this page or visiting our store.</Answer>
+
+        <Question>2. What payment methods do you accept?</Question>
+        <Answer>We accept all major credit cards, PayPal, and cash payments in-store.</Answer>
+
+        <Question>3. Can I modify or cancel my order?</Question>
+        <Answer>Yes, please contact us as soon as possible if you need to modify or cancel your order.</Answer>
+      </FAQSection>
     </InquireContainer>
   );
 }
