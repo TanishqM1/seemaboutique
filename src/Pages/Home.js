@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ReviewCarousel from '../components/Review'; // Import the ReviewCarousel component
+import infocard from '../imgs/infocard.png';
 
 // Styled components
 const PageContainer = styled.div`
@@ -75,7 +76,7 @@ const Home = () => {
         
         {/* Right Image (You can replace with actual image) */}
         <ImageContainer>
-          <img src="/path/to/your/image.jpg" alt="Boutique interior showcasing our designs" />  {/* Replace with an image */}
+          <img src={infocard} alt="SeemaBoutique Info Card  " />  {/* Replace with an image */}
         </ImageContainer>
       </ContentSection>
 
