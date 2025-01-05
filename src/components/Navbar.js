@@ -44,7 +44,7 @@ function Navbar() {
         <NavButton to="/">Home</NavButton>
         <NavButton to="/gallery">Gallery</NavButton>
         <NavButton to="/about">About Us</NavButton>
-        <NavButton to="/inquire">Custom Orders</NavButton>
+        <NavButton to="/inquire">Inquire</NavButton>
       </NavButtonsContainer>
     </NavbarContainer>
   );
