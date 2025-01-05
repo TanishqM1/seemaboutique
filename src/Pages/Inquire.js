@@ -8,11 +8,13 @@ const InquireContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
 `;
 
 const Title = styled.h1`
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
+  color: black;
   margin-bottom: 2rem;
   text-align: center;
 `;

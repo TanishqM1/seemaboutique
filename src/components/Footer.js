@@ -3,6 +3,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
+import logo from '../imgs/logo.png';
+
 // Importing the Great Vibes font from Google Fonts
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
@@ -32,7 +34,7 @@ const LogoContainer = styled.div`
   flex-direction: column;
   align-items: center; // Center the logo and icons
   img {
-    max-width: 150px; // Set a maximum size for the logo
+    max-width: 200px; // Set a maximum size for the logo
     height: auto;
     margin-bottom: 1rem; // Space between the logo and icons
   }
@@ -40,7 +42,7 @@ const LogoContainer = styled.div`
 
 const SocialIconsContainer = styled.div`
   display: flex;
-  gap: 1.5rem; // Space between the icons
+  gap: 3rem; // Space between the icons
   a {
     font-size: 2rem; // Adjust icon size
     &:hover {
@@ -97,7 +99,7 @@ const Footer = () => {
         <FooterContent>
           {/* Left container for the logo */}
           <LogoContainer>
-            <img src="/path/to/your/logo.png" alt="Seema Designer Boutique Logo" />
+            <img src={logo} alt="Seema Designer Boutique Logo" />
             <SocialIconsContainer>
               <a href="https://www.facebook.com/seema.mehta.982/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFacebook} style={{ color: '#4267B2' }} />
@@ -115,7 +117,7 @@ const Footer = () => {
             <a href="/gallery">Gallery</a>
             <a href="/orders">Orders</a>
             <a href="/terms">Terms of Service</a>
-            <a href="/contact">Contact</a>
+            <a href="/Inquire">Contact</a>
           </QuickLinks>
 
           {/* Right container for Information */}
