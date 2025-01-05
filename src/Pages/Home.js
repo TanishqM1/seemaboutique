@@ -76,7 +76,7 @@ const Home = () => {
         
         {/* Right Image (You can replace with actual image) */}
         <ImageContainer>
-          <img src={infocard} alt="SeemaBoutique Info Card  " />  {/* Replace with an image */}
+          <img src={infocard} alt="SeemaBoutique Info Card" />  {/* Replace with an image */}
         </ImageContainer>
       </ContentSection>
 
