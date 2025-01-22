@@ -49,6 +49,18 @@ const Paragraph = styled.p`
   text-align: justify;
 `;
 
+const CenterImage = styled.div`
+
+margin: auto;
+padding-top: 4rem;
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+`;
+
 const ContactSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -111,6 +123,19 @@ function About() {
           intricate details to bold statements, we are dedicated to delivering
           a seamless and unforgettable experience.
         </Paragraph>
+      </Section>
+
+      {/* Section for 2nd image */}
+
+      <Section>
+
+      <CenterImage>
+          <img
+            src="https://via.placeholder.com/600x400" // Replace with your image URL
+            alt="Our Story"
+          />
+      </CenterImage>
+
       </Section>
 
       {/* Contact Us Section */}
