@@ -59,8 +59,8 @@ const SecondImage = styled.div`
 const Home = () => {
   return (
     <PageContainer>
-      {/* Top Image Section with alt text */}
-      <HeaderImage aria-label="Store front view of Seema Designer Boutique" />
+      {/* {Welcome Image} */}
+      <HeaderImage aria-label="" />
 
       {/* Welcome Text */}
       <WelcomeText>Welcome!</WelcomeText>
@@ -81,7 +81,7 @@ const Home = () => {
       </ContentSection>
 
       {/* Second Image Section */}
-      <SecondImage aria-label="Fashion collection at Seema Designer Boutique" />
+      <SecondImage aria-label="Image after Information  " />
 
       {/* Review Carousel Section */}
       <ReviewCarousel />
