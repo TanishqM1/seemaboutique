@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Gallery1 from '../imgs/Gal1.jpg';
-import Gallery2 from '../imgs/Gal3.JPG';
-import Gallery3 from '../imgs/Gal7.JPG';
-import Gallery4 from '../imgs/Gal5.JPG';
+import GalleryImages from '../../src/components/GalleryImages';
+
 const PageContainer = styled.div`
   padding: 2rem;
   min-height: 80vh;
@@ -28,37 +26,6 @@ const Title = styled.h1`
   margin-top: 8rem;
 `;
 
-const WorkSection = styled.div`
-  display: flex;
-  flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
-  align-items: center;
-  margin-bottom: 4rem; // Increased spacing between rows
-  margin-left: 3rem; // Space on the left
-  margin-right: 3rem; // Space on the right
-`;
-
-const ImageContainer = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-`;
-
-const DescriptionContainer = styled.div`
-  flex: 1;
-  padding: 1rem 2rem;
-  text-align: justify;
-  font-size: 1.1rem;
-  color: #333;
-`;
-
 const Gallery = () => {
   return (
     <PageContainer>
@@ -70,42 +37,8 @@ const Gallery = () => {
       {/* Title */}
       <Title>Highlights</Title>
 
-      {/* Rows of Work */}
-      <WorkSection>
-        <ImageContainer>
-          <img src={Gallery3} alt="Work 1" />
-        </ImageContainer>
-        <DescriptionContainer>
-          <p>
-            This is a description of the first project or work showcased in the gallery.
-          </p>
-        </DescriptionContainer>
-      </WorkSection>
-
-      <WorkSection reverse>
-        <ImageContainer>
-          <img src={Gallery2} alt="Work 2" />
-        </ImageContainer>
-        <DescriptionContainer>
-          <p>
-            This is a description of the second project or work showcased in the gallery.
-          </p>
-        </DescriptionContainer>
-      </WorkSection>
-
-      <WorkSection>
-        <ImageContainer>
-          <img src={Gallery4} alt="Work 1" />
-        </ImageContainer>
-        <DescriptionContainer>
-          <p>
-            This is a description of the first project or work showcased in the gallery.
-          </p>
-        </DescriptionContainer>
-      </WorkSection>
-
-
-      {/* Add more rows as needed */}
+      {/* Gallery Carousel */}
+      <GalleryImages />
     </PageContainer>
   );
 };
