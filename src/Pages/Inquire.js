@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com'; // Install with: npm install emailjs-com
+import inquirepic from '../imgs/Inquire_Gallery.png'
 
 // Styled Components
 const InquireContainer = styled.div`
@@ -131,15 +132,41 @@ const FAQTitle = styled.h2`
 `;
 
 const Question = styled.h3`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #333;
   margin-bottom: 0.5rem;
+  width: 125%;
 `;
 
 const Answer = styled.p`
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #555;
   margin-bottom: 1.5rem;
+  width: 125%;
+`;
+
+const ButtonContainer = styled.div`
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2em;
+`;
+
+const ToggleButton = styled.button`
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 1rem;
+
+  &:hover {
+    background-color: #333;
+  }
 `;
 
 function Inquire() {
@@ -149,6 +176,8 @@ function Inquire() {
     email: '',
     message: '',
   });
+
+  const [activeSection, setActiveSection] = useState('women');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -185,7 +214,7 @@ function Inquire() {
             or to inquire about an order. We are here to help and look forward to hearing from you.
           </p>
         </DescriptionText>
-        <Image src="/path-to-your-image.jpg" alt="Inquire" />
+        <Image src={inquirepic} alt="Inquire" />
       </DescriptionContainer>
 
       <Form onSubmit={handleSubmit}>
@@ -226,14 +255,60 @@ function Inquire() {
 
       <FAQSection>
         <FAQTitle>Frequently Asked Questions</FAQTitle>
-        <Question>1. How do I place an order?</Question>
-        <Answer>You can place an order by contacting us through this page or visiting our store.</Answer>
 
-        <Question>2. What payment methods do you accept?</Question>
-        <Answer>We accept all major credit cards, PayPal, and cash payments in-store.</Answer>
+        {/* Buttons to toggle FAQ sections */}
+      <ButtonContainer>
+        <ToggleButton onClick={() => setActiveSection('women')}>Women's Fashion</ToggleButton>
+        <ToggleButton onClick={() => setActiveSection('men')}>Men's Fashion</ToggleButton>
+      </ButtonContainer>
 
-        <Question>3. Can I modify or cancel my order?</Question>
-        <Answer>Yes, please contact us as soon as possible if you need to modify or cancel your order.</Answer>
+        {activeSection === 'women' ? (
+          <>
+            <Question>1. How do I choose the right size and fit for my Indian outfit?</Question>
+<Answer>The best and most perfect fit is achieved with made-to-measure clothing.</Answer>
+
+<Question>2. What are the latest trends in Indian fashion for women?</Question>
+<Answer>Current trends include statement sleeves, bold colors, and intricate embroidery. You can also experiment with modern silhouettes and fusion styles.</Answer>
+
+<Question>3. How do I style my saree for a formal event?</Question>
+<Answer>To style your saree for a formal event, choose a luxurious fabric like silk or velvet, and pair it with elegant jewelry and heels. Consider adding a statement blouse or a designer shawl for extra flair.</Answer>
+
+<Question>4. What is the significance of different colors in Indian clothing?</Question>
+<Answer>In Indian culture, colors have symbolic meanings. For example, red represents love and marriage, while white symbolizes purity and innocence.</Answer>
+
+<Question>5. How do I care for and maintain my Indian outfits?</Question>
+<Answer>To care for your Indian outfits, follow the washing instructions, avoid wringing or twisting, and store them in a cool, dry place. You may also use fabric protectors or opt for dry cleaning services.</Answer>
+
+<Question>6. What are the different types of fabrics used in Indian clothing?</Question>
+<Answer>Indian clothing uses a variety of fabrics, including cotton, silk, chiffon, georgette, and velvet. Each fabric has its unique texture, drape, and durability, making it suitable for different occasions.</Answer>
+
+<Question>7. How do I accessorize my Indian outfit with jewelry and other accessories?</Question>
+<Answer>To accessorize your Indian outfit, choose jewelry that complements the colors and patterns of your ensemble. You can also add accessories like a bindi, bangles, or a clutch to complete the look.</Answer>
+          </>
+        ) : (
+          <>
+            <Question>1. What is the difference between a kurta and a sherwani?</Question>
+            <Answer>A kurta is a long tunic that can be worn with pants or a dhoti, while a sherwani is a long coat that is typically worn for formal occasions.</Answer>
+
+            <Question>2. How do I choose the right size and fit for my Indian outfit?</Question>
+            <Answer>To choose the right size and fit, consider your body type, height, and measurements. You can also consult with a designer or a sales associate for guidance.</Answer>
+
+            <Question>3. What are the latest trends in Indian fashion for men?</Question>
+            <Answer>Some current trends include slim-fit kurtas, bold colors, and intricate embroidery. You can also experiment with modern silhouettes, like jackets and trousers.</Answer>
+
+            <Question>4. How do I style my turban or pagri?</Question>
+            <Answer>To style your turban or pagri, choose a fabric that complements your outfit, and tie it in a way that suits your face shape and occasion.</Answer>
+
+            <Question>5. What is the significance of different colors in Indian men's clothing?</Question>
+            <Answer>Colors like white and beige represent purity and peace, while darker colors like black and maroon are often worn for formal or evening events.</Answer>
+
+            <Question>6. How do I care for and maintain my Indian clothing?</Question>
+            <Answer>Follow the care instructions on your clothing, wash gently, and store it in a cool, dry place. You may also need to dry clean certain fabrics.</Answer>
+
+            <Question>7. How do I accessorize my Indian men's outfit?</Question>
+            <Answer>To accessorize, you can add items like cufflinks, a pocket square, a waistcoat, or a stylish brooch to complement your outfit.</Answer>
+          </>
+        )}
       </FAQSection>
     </InquireContainer>
   );

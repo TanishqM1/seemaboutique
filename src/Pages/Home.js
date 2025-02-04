@@ -48,13 +48,13 @@ const ImageContainer = styled.div`
   }
 `;
 
-const SecondImage = styled.div`
-  width: 100%;
-  height: 70vh;  // Same height as the first image
-  background-image: url('/path/to/your/second-image.jpg');  // Replace with your second image path
-  background-size: cover;
-  background-position: center;
-`;
+// const SecondImage = styled.div`
+//   width: 100%;
+//   height: 70vh;  // Same height as the first image
+//   background-image: url('/path/to/your/second-image.jpg');  // Replace with your second image path
+//   background-size: cover;
+//   background-position: center;
+// `;
 
 const Home = () => {
   return (
@@ -79,10 +79,6 @@ const Home = () => {
           <img src={infocard} alt="SeemaBoutique Info Card" />  {/* Replace with an image */}
         </ImageContainer>
       </ContentSection>
-
-      {/* Second Image Section */}
-      <SecondImage aria-label="Image after Information  " />
-
       {/* Review Carousel Section */}
       <ReviewCarousel />
     </PageContainer>

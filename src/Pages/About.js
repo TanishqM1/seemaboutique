@@ -42,13 +42,6 @@ const ImageContent = styled.div`
   }
 `;
 
-const Paragraph = styled.p`
-  padding: 0 10vw;
-  font-size: 1.2rem;
-  line-height: 2;
-  text-align: justify;
-`;
-
 const CenterImage = styled.div`
 
 margin: auto;
@@ -100,10 +93,7 @@ function About() {
         <TextContent>
           <h2>Our Story</h2>
           <p>
-            Welcome to [Your Brand Name]! Our journey began with a vision to
-            create exceptional and personalized designs that leave a lasting
-            impression. We take pride in our craftsmanship and attention to
-            detail, ensuring each piece is tailored to perfection.
+          Welcome to Seema Boutique! Our journey began with a vision to create exceptional, personalized designs that make a lasting impression. We take great pride in our craftsmanship and meticulous attention to detail, ensuring that each piece is crafted to fit you perfectly. At Seema Boutique, every creation is uniquely yours, tailored with precision for a flawless fit. Made to Measure.
           </p>
         </TextContent>
         <ImageContent>
@@ -112,17 +102,6 @@ function About() {
             alt="Our Story"
           />
         </ImageContent>
-      </Section>
-
-      {/* Section with a full-width paragraph */}
-      <Section>
-        <Paragraph>
-          At [Your Brand Name], we strive to create designs that resonate with
-          individuality and elegance. Every project is a collaboration, where
-          your ideas meet our expertise to bring your vision to life. From
-          intricate details to bold statements, we are dedicated to delivering
-          a seamless and unforgettable experience.
-        </Paragraph>
       </Section>
 
       {/* Section for 2nd image */}
