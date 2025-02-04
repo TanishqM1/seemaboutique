@@ -6,10 +6,10 @@ import Gallery3 from "../imgs/Gal7.JPG";
 import Gallery4 from "../imgs/Gal5.JPG";
 
 const images = [
-  { src: Gallery1, caption: "Caption for Image 1" },
-  { src: Gallery2, caption: "Caption for Image 2" },
-  { src: Gallery3, caption: "Caption for Image 3" },
-  { src: Gallery4, caption: "Caption for Image 4" },
+  { src: Gallery1 },
+  { src: Gallery2 },
+  { src: Gallery3 },
+  { src: Gallery4 },
 ];
 
 const CarouselContainer = styled.div`
@@ -48,7 +48,7 @@ const Caption = styled.div`
 `;
 
 const ArrowButton = styled.button`
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -87,10 +87,6 @@ const GalleryImages = () => {
   return (
     <CarouselContainer>
       <ImageWrapper>
-        <ArrowButton direction="left" onClick={prevImage}>
-          {"<"}
-        </ArrowButton>
-
         <Image
           src={images[getImageIndex(-1)].src}
           alt="Previous"
@@ -106,11 +102,15 @@ const GalleryImages = () => {
           alt="Next"
           isFocused={false}
         />
-
-        <ArrowButton direction="right" onClick={nextImage}>
-          {">"}
-        </ArrowButton>
       </ImageWrapper>
+      <ArrowButton direction="left" onClick={prevImage}>
+        {"<"}
+      </ArrowButton>
+
+      <ArrowButton direction="right" onClick={nextImage}>
+        {">"}
+      </ArrowButton>
+
       <Caption>{images[currentIndex].caption}</Caption>
     </CarouselContainer>
   );
