@@ -35,7 +35,7 @@ const DescriptionContainer = styled.div`
 `;
 
 const Image = styled.img`
-  width: 50%;
+  width: 25%;
   height: auto;
   border-radius: 10px;
 
@@ -210,8 +210,7 @@ function Inquire() {
         <DescriptionText>
           <Title>Inquire</Title>
           <p>
-            Welcome to our Inquire page! Feel free to reach out with any questions, concerns, 
-            or to inquire about an order. We are here to help and look forward to hearing from you.
+          Welcome to our Inquire page! Feel free to reach out with any questions, concerns, or to inquire about an order. We are here to help and look forward to hearing from you. Your satisfaction is our priority, and we will get back to you as soon as possible.
           </p>
         </DescriptionText>
         <Image src={inquirepic} alt="Inquire" />
