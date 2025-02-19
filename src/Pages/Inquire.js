@@ -264,48 +264,48 @@ function Inquire() {
 
         {activeSection === 'women' ? (
           <>
-            <Question>1. How do I choose the right size and fit for my Indian outfit?</Question>
+            <Question> How do I choose the right size and fit for my Indian outfit?</Question>
 <Answer>The best and most perfect fit is achieved with made-to-measure clothing.</Answer>
 
-<Question>2. What are the latest trends in Indian fashion for women?</Question>
+<Question> What are the latest trends in Indian fashion for women?</Question>
 <Answer>Current trends include statement sleeves, bold colors, and intricate embroidery. You can also experiment with modern silhouettes and fusion styles.</Answer>
 
-<Question>3. How do I style my saree for a formal event?</Question>
+<Question> How do I style my saree for a formal event?</Question>
 <Answer>To style your saree for a formal event, choose a luxurious fabric like silk or velvet, and pair it with elegant jewelry and heels. Consider adding a statement blouse or a designer shawl for extra flair.</Answer>
 
-<Question>4. What is the significance of different colors in Indian clothing?</Question>
+<Question> What is the significance of different colors in Indian clothing?</Question>
 <Answer>In Indian culture, colors have symbolic meanings. For example, red represents love and marriage, while white symbolizes purity and innocence.</Answer>
 
-<Question>5. How do I care for and maintain my Indian outfits?</Question>
+<Question> How do I care for and maintain my Indian outfits?</Question>
 <Answer>To care for your Indian outfits, follow the washing instructions, avoid wringing or twisting, and store them in a cool, dry place. You may also use fabric protectors or opt for dry cleaning services.</Answer>
 
-<Question>6. What are the different types of fabrics used in Indian clothing?</Question>
+<Question> What are the different types of fabrics used in Indian clothing?</Question>
 <Answer>Indian clothing uses a variety of fabrics, including cotton, silk, chiffon, georgette, and velvet. Each fabric has its unique texture, drape, and durability, making it suitable for different occasions.</Answer>
 
-<Question>7. How do I accessorize my Indian outfit with jewelry and other accessories?</Question>
+<Question> How do I accessorize my Indian outfit with jewelry and other accessories?</Question>
 <Answer>To accessorize your Indian outfit, choose jewelry that complements the colors and patterns of your ensemble. You can also add accessories like a bindi, bangles, or a clutch to complete the look.</Answer>
           </>
         ) : (
           <>
-            <Question>1. What is the difference between a kurta and a sherwani?</Question>
+            <Question> What is the difference between a kurta and a sherwani?</Question>
             <Answer>A kurta is a long tunic that can be worn with pants or a dhoti, while a sherwani is a long coat that is typically worn for formal occasions.</Answer>
 
-            <Question>2. How do I choose the right size and fit for my Indian outfit?</Question>
+            <Question> How do I choose the right size and fit for my Indian outfit?</Question>
             <Answer>To choose the right size and fit, consider your body type, height, and measurements. You can also consult with a designer or a sales associate for guidance.</Answer>
 
-            <Question>3. What are the latest trends in Indian fashion for men?</Question>
+            <Question> What are the latest trends in Indian fashion for men?</Question>
             <Answer>Some current trends include slim-fit kurtas, bold colors, and intricate embroidery. You can also experiment with modern silhouettes, like jackets and trousers.</Answer>
 
-            <Question>4. How do I style my turban or pagri?</Question>
+            <Question> How do I style my turban or pagri?</Question>
             <Answer>To style your turban or pagri, choose a fabric that complements your outfit, and tie it in a way that suits your face shape and occasion.</Answer>
 
-            <Question>5. What is the significance of different colors in Indian men's clothing?</Question>
+            <Question> What is the significance of different colors in Indian men's clothing?</Question>
             <Answer>Colors like white and beige represent purity and peace, while darker colors like black and maroon are often worn for formal or evening events.</Answer>
 
-            <Question>6. How do I care for and maintain my Indian clothing?</Question>
+            <Question> How do I care for and maintain my Indian clothing?</Question>
             <Answer>Follow the care instructions on your clothing, wash gently, and store it in a cool, dry place. You may also need to dry clean certain fabrics.</Answer>
 
-            <Question>7. How do I accessorize my Indian men's outfit?</Question>
+            <Question> How do I accessorize my Indian men's outfit?</Question>
             <Answer>To accessorize, you can add items like cufflinks, a pocket square, a waistcoat, or a stylish brooch to complement your outfit.</Answer>
           </>
         )}

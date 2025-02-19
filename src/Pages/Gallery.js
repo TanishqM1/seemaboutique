@@ -31,7 +31,8 @@ const Gallery = () => {
     <PageContainer>
       {/* Store Logo */}
       <LogoContainer>
-        <img src='' alt="Seema Designer Boutique Logo" />
+        {/* uncomment to add logo as desired. */}
+        {/* <img src='' alt="Seema Designer Boutique Logo" /> */}
       </LogoContainer>
 
       {/* Title */}

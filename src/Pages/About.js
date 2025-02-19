@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import logo from '../imgs/seemalogo.png';
+import logo2 from '../imgs/altlogo.jpg';
 
 // Styled Components
 const AboutContainer = styled.div`
@@ -45,9 +47,9 @@ const ImageContent = styled.div`
 const CenterImage = styled.div`
 
 margin: auto;
-padding-top: 4rem;
+padding-top: 1rem;
   img {
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   }
@@ -98,7 +100,7 @@ function About() {
         </TextContent>
         <ImageContent>
           <img
-            src="https://via.placeholder.com/600x400" // Replace with your image URL
+            src={logo} // Replace with your image URL
             alt="Our Story"
           />
         </ImageContent>
@@ -110,7 +112,7 @@ function About() {
 
       <CenterImage>
           <img
-            src="https://via.placeholder.com/600x400" // Replace with your image URL
+            src={logo2} // Replace with your image URL
             alt="Our Story"
           />
       </CenterImage>

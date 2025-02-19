@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ReviewCarousel from '../components/Review'; // Import the ReviewCarousel component
 import infocard from '../imgs/infocard.png';
+import logo from '../imgs/seemalogo.png'
 
 // Styled components
 const PageContainer = styled.div`
@@ -11,11 +12,17 @@ const PageContainer = styled.div`
 
 const HeaderImage = styled.div`
   width: 100%;
-  height: 70vh;  // Increased height to take up more of the screen
-  background-image: url('/path/to/your/image.jpg'); // Replace with your image path
-  background-size: cover;
+  height: 70vh;  // Adjust height as needed
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-image: url(${logo});  // Use the imported logo
+  background-size: contain;  // Ensure the full logo is visible
+  background-repeat: no-repeat;
   background-position: center;
 `;
+
 
 const WelcomeText = styled.h1`
   font-family: 'Great Vibes', cursive;  // Cursive font for "Welcome"
@@ -59,9 +66,7 @@ const ImageContainer = styled.div`
 const Home = () => {
   return (
     <PageContainer>
-      {/* {Welcome Image} */}
-      <HeaderImage aria-label="" />
-
+      <HeaderImage />
       {/* Welcome Text */}
       <WelcomeText>Welcome!</WelcomeText>
 
