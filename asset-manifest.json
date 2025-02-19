@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/SeemaBoutique/static/js/main.094c4bc6.js",
+    "static/media/Gal1.jpg": "/SeemaBoutique/static/media/Gal1.e9b5f6a5af202d8d93b9.jpg",
+    "static/media/Inquire_Gallery.png": "/SeemaBoutique/static/media/Inquire_Gallery.ec2c4a2bbdef49513ef3.png",
+    "static/media/Gal7.JPG": "/SeemaBoutique/static/media/Gal7.ad24c40721baaab8d951.JPG",
+    "static/media/Gal5.JPG": "/SeemaBoutique/static/media/Gal5.7034fc84727212ba5b16.JPG",
+    "static/media/Gal3.JPG": "/SeemaBoutique/static/media/Gal3.8cc1ce1b4a40c725fe79.JPG",
+    "static/media/altlogo.jpg": "/SeemaBoutique/static/media/altlogo.442d6c41163038972956.jpg",
+    "static/media/infocard.png": "/SeemaBoutique/static/media/infocard.b12297c2ebdfe6b50bf0.png",
+    "static/media/logo.png": "/SeemaBoutique/static/media/logo.d57fa9f0c3f2af51e2b0.png",
+    "static/media/seemalogo.png": "/SeemaBoutique/static/media/seemalogo.d57fa9f0c3f2af51e2b0.png",
+    "static/media/nikita.png": "/SeemaBoutique/static/media/nikita.bd99b3e54381b666844f.png",
+    "static/media/nav.png": "/SeemaBoutique/static/media/nav.c5a1e9bff5d5a4469b1f.png",
+    "static/media/nihit.png": "/SeemaBoutique/static/media/nihit.c53945a6dfff9ecb726e.png",
+    "index.html": "/SeemaBoutique/index.html",
+    "main.094c4bc6.js.map": "/SeemaBoutique/static/js/main.094c4bc6.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.094c4bc6.js"
+  ]
+}
