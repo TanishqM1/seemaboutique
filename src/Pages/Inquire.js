@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import emailjs from 'emailjs-com'; // Install with: npm install emailjs-com
-import inquirepic from '../imgs/Inquire_Gallery.png'
+import emailjs from 'emailjs-com';
+import inquirepic from '../imgs/Inquire_Gallery.png';
 
-// Styled Components
 const InquireContainer = styled.div`
   padding: 2rem;
   display: flex;
@@ -12,60 +11,74 @@ const InquireContainer = styled.div`
   color: black;
 `;
 
+const MainContent = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const LeftColumn = styled.div`
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
 const Title = styled.h1`
   font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
+  font-size: 4rem;
   color: black;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
 `;
 
-const DescriptionContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 3rem;
-  gap: 2rem;
-  width: 100%;
-  max-width: 900px;
-
-  @media (max-width: 768px) {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-`;
-
-const Image = styled.img`
-  width: 25%;
-  height: auto;
-  border-radius: 10px;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
-
 const DescriptionText = styled.div`
-  flex: 1;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #555;
+  text-align: center;
 
   p {
     margin: 0;
   }
 `;
 
+const Image = styled.img`
+  flex: 1;
+  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+`;
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 600px;
   gap: 1rem;
-  margin-bottom: 3rem;
 `;
 
 const Row = styled.div`
   display: flex;
   gap: 1rem;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 const Input = styled.input`
@@ -135,14 +148,12 @@ const Question = styled.h3`
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 0.5rem;
-  width: 125%;
 `;
 
 const Answer = styled.p`
   font-size: 1.2rem;
   color: #555;
   margin-bottom: 1.5rem;
-  width: 125%;
 `;
 
 const ButtonContainer = styled.div`
@@ -191,7 +202,6 @@ function Inquire() {
     const templateID = 'template_rw8cypp';
     const userID = '8hGkCqMK8xvp4XupF';
 
-    // EmailJS send form
     emailjs
       .send(serviceID, templateID, formData, userID)
       .then(() => {
@@ -206,106 +216,96 @@ function Inquire() {
 
   return (
     <InquireContainer>
-      <DescriptionContainer>
-        <DescriptionText>
-          <Title>Inquire</Title>
-          <p>
-          Welcome to our Inquire page! Feel free to reach out with any questions, concerns, or to inquire about an order. We are here to help and look forward to hearing from you. Your satisfaction is our priority, and we will get back to you as soon as possible.
-          </p>
-        </DescriptionText>
-        <Image src={inquirepic} alt="Inquire" />
-      </DescriptionContainer>
+      <MainContent>
+        <LeftColumn>
+          <DescriptionText>
+            <Title>Inquire</Title>
+            <p>
+              Welcome! I’m so glad you’re here. Please feel free to reach out with any questions, concerns, or to inquire about an order. I’m always happy to help. Your satisfaction truly means the world to me, and I look forward to personally connecting with you. I’ll get back to you as soon as possible!            
+            </p>
+          </DescriptionText>
 
-      <Form onSubmit={handleSubmit}>
-        <Row>
-          <Input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <Input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number (Optional)"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </Row>
-        <Input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <TextArea
-          name="message"
-          placeholder="Message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
-        <SubmitButton type="submit">Send</SubmitButton>
-      </Form>
+          <Form onSubmit={handleSubmit}>
+            <Row>
+              <Input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <Input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number (Optional)"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </Row>
+            <Input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <TextArea
+              name="message"
+              placeholder="Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+            <SubmitButton type="submit">Send</SubmitButton>
+          </Form>
+        </LeftColumn>
+
+        <Image src={inquirepic} alt="Inquire" />
+      </MainContent>
 
       <FAQSection>
         <FAQTitle>Frequently Asked Questions</FAQTitle>
 
-        {/* Buttons to toggle FAQ sections */}
-      <ButtonContainer>
-        <ToggleButton onClick={() => setActiveSection('women')}>Women's Fashion</ToggleButton>
-        <ToggleButton onClick={() => setActiveSection('men')}>Men's Fashion</ToggleButton>
-      </ButtonContainer>
+        <ButtonContainer>
+          <ToggleButton onClick={() => setActiveSection('women')}>Women's Fashion</ToggleButton>
+          <ToggleButton onClick={() => setActiveSection('men')}>Men's Fashion</ToggleButton>
+        </ButtonContainer>
 
         {activeSection === 'women' ? (
           <>
-            <Question> How do I choose the right size and fit for my Indian outfit?</Question>
-<Answer>The best and most perfect fit is achieved with made-to-measure clothing.</Answer>
-
-<Question> What are the latest trends in Indian fashion for women?</Question>
-<Answer>Current trends include statement sleeves, bold colors, and intricate embroidery. You can also experiment with modern silhouettes and fusion styles.</Answer>
-
-<Question> How do I style my saree for a formal event?</Question>
-<Answer>To style your saree for a formal event, choose a luxurious fabric like silk or velvet, and pair it with elegant jewelry and heels. Consider adding a statement blouse or a designer shawl for extra flair.</Answer>
-
-<Question> What is the significance of different colors in Indian clothing?</Question>
-<Answer>In Indian culture, colors have symbolic meanings. For example, red represents love and marriage, while white symbolizes purity and innocence.</Answer>
-
-<Question> How do I care for and maintain my Indian outfits?</Question>
-<Answer>To care for your Indian outfits, follow the washing instructions, avoid wringing or twisting, and store them in a cool, dry place. You may also use fabric protectors or opt for dry cleaning services.</Answer>
-
-<Question> What are the different types of fabrics used in Indian clothing?</Question>
-<Answer>Indian clothing uses a variety of fabrics, including cotton, silk, chiffon, georgette, and velvet. Each fabric has its unique texture, drape, and durability, making it suitable for different occasions.</Answer>
-
-<Question> How do I accessorize my Indian outfit with jewelry and other accessories?</Question>
-<Answer>To accessorize your Indian outfit, choose jewelry that complements the colors and patterns of your ensemble. You can also add accessories like a bindi, bangles, or a clutch to complete the look.</Answer>
+            <Question>How do I choose the right size and fit for my Indian outfit?</Question>
+            <Answer>The best and most perfect fit is achieved with made-to-measure clothing.</Answer>
+            <Question>What are the latest trends in Indian fashion for women?</Question>
+            <Answer>Current trends include statement sleeves, bold colors, and intricate embroidery. You can also experiment with modern silhouettes and fusion styles.</Answer>
+            <Question>How do I style my saree for a formal event?</Question>
+            <Answer>Choose luxurious fabric, elegant jewelry, and heels. Consider a statement blouse or designer shawl.</Answer>
+            <Question>What is the significance of different colors in Indian clothing?</Question>
+            <Answer>Red represents love and marriage, while white symbolizes purity and innocence.</Answer>
+            <Question>How do I care for my Indian outfits?</Question>
+            <Answer>Follow wash instructions, avoid wringing, and store in a cool, dry place. Use dry cleaning when needed.</Answer>
+            <Question>What types of fabrics are used?</Question>
+            <Answer>Fabrics include cotton, silk, chiffon, georgette, and velvet, each offering different textures and drape.</Answer>
+            <Question>How do I accessorize?</Question>
+            <Answer>Choose jewelry to match your outfit colors and patterns. Add bangles, bindi, or a clutch.</Answer>
           </>
         ) : (
           <>
-            <Question> What is the difference between a kurta and a sherwani?</Question>
-            <Answer>A kurta is a long tunic that can be worn with pants or a dhoti, while a sherwani is a long coat that is typically worn for formal occasions.</Answer>
-
-            <Question> How do I choose the right size and fit for my Indian outfit?</Question>
-            <Answer>To choose the right size and fit, consider your body type, height, and measurements. You can also consult with a designer or a sales associate for guidance.</Answer>
-
-            <Question> What are the latest trends in Indian fashion for men?</Question>
-            <Answer>Some current trends include slim-fit kurtas, bold colors, and intricate embroidery. You can also experiment with modern silhouettes, like jackets and trousers.</Answer>
-
-            <Question> How do I style my turban or pagri?</Question>
-            <Answer>To style your turban or pagri, choose a fabric that complements your outfit, and tie it in a way that suits your face shape and occasion.</Answer>
-
-            <Question> What is the significance of different colors in Indian men's clothing?</Question>
-            <Answer>Colors like white and beige represent purity and peace, while darker colors like black and maroon are often worn for formal or evening events.</Answer>
-
-            <Question> How do I care for and maintain my Indian clothing?</Question>
-            <Answer>Follow the care instructions on your clothing, wash gently, and store it in a cool, dry place. You may also need to dry clean certain fabrics.</Answer>
-
-            <Question> How do I accessorize my Indian men's outfit?</Question>
-            <Answer>To accessorize, you can add items like cufflinks, a pocket square, a waistcoat, or a stylish brooch to complement your outfit.</Answer>
+            <Question>What is the difference between a kurta and a sherwani?</Question>
+            <Answer>A kurta is a casual tunic, while a sherwani is a more formal, long coat often worn for weddings.</Answer>
+            <Question>How do I choose the right fit?</Question>
+            <Answer>Base your choice on body type and measurements. Ask for designer guidance if unsure.</Answer>
+            <Question>What are current trends for men?</Question>
+            <Answer>Trends include slim-fit kurtas, bold colors, embroidery, and modern fusion silhouettes.</Answer>
+            <Question>How do I style a turban?</Question>
+            <Answer>Pick fabric that matches your outfit. Style depends on face shape and event type.</Answer>
+            <Question>What do colors signify?</Question>
+            <Answer>Light colors represent peace; dark colors are more formal and bold.</Answer>
+            <Question>How do I maintain my clothes?</Question>
+            <Answer>Follow care tags, store properly, and dry clean delicate items.</Answer>
+            <Question>How to accessorize men's outfits?</Question>
+            <Answer>Add cufflinks, pocket squares, waistcoats, or brooches for a polished look.</Answer>
           </>
         )}
       </FAQSection>
