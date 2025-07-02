@@ -27,7 +27,7 @@ const HeaderImage = styled.div`
 const WelcomeText = styled.h1`
   font-family: 'Great Vibes', cursive;  // Cursive font for "Welcome"
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-top: 2rem;
 `;
 
@@ -35,6 +35,7 @@ const ContentSection = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
+  margin: 0rem 4rem;
 `;
 
 const Description = styled.div`
@@ -42,6 +43,7 @@ const Description = styled.div`
   padding: 1rem;
   font-size: 1.2rem;
   color: #333;
+  text-align: justify;
 `;
 
 const ImageContainer = styled.div`
