@@ -12,30 +12,33 @@ const Section = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5rem;
-
-  &:nth-child(2) {
-    flex-direction: column;
-    text-align: center;
-  }
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 `;
 
 const TextContent = styled.div`
   flex: 1;
+  min-width: 200px;
   padding: 2rem;
+  margin-top: -6rem; /* Move text box up slightly */
   font-size: 1.2rem;
   line-height: 1.8;
+  text-align: justify;
 
   h2 {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
+    text-align: center;
   }
 `;
 
 const ImageContent = styled.div`
   flex: 1;
+  min-width: 300px;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 
   img {
     max-width: 100%;
@@ -44,31 +47,40 @@ const ImageContent = styled.div`
   }
 `;
 
-const CenterImage = styled.div`
+const SecondSection = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+`;
 
-margin: auto;
-padding-top: 1rem;
+const SecondImage = styled.div`
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+
   img {
-    max-width: 80%;
+    max-width: 90%;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   }
-
 `;
 
-const ContactSection = styled.div`
+const ContactBox = styled.div`
+  flex: 1;
+  min-width: 200px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 80vh;
   text-align: center;
-  background-color: #f8f8f8;
-
   h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -76,8 +88,8 @@ const ContactButton = styled.button`
   background-color: black;
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+  padding: 1rem 4rem;
+  font-size: 1.4rem;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -90,42 +102,37 @@ const ContactButton = styled.button`
 function About() {
   return (
     <AboutContainer>
-      {/* Section with text and image */}
+      {/* First section with Our Story text and image */}
       <Section>
         <TextContent>
           <h2>Our Story</h2>
           <p>
-          Welcome to Seema Boutique! Our journey began with a vision to create exceptional, personalized designs that make a lasting impression. We take great pride in our craftsmanship and meticulous attention to detail, ensuring that each piece is crafted to fit you perfectly. At Seema Boutique, every creation is uniquely yours, tailored with precision for a flawless fit. Made to Measure.
+            Welcome to Seema Boutique! Our journey began with a vision to create exceptional, personalized designs that make a lasting impression. We take great pride in our craftsmanship and meticulous attention to detail, ensuring that each piece is crafted to fit you perfectly. At Seema Boutique, every creation is uniquely yours, tailored with precision for a flawless fit. Made to Measure.
           </p>
         </TextContent>
         <ImageContent>
           <img
-            src={logo} // Replace with your image URL
+            src={logo}
             alt="Our Story"
           />
         </ImageContent>
       </Section>
 
-      {/* Section for 2nd image */}
-
-      <Section>
-
-      <CenterImage>
+      {/* Second section with image on left and contact on right */}
+      <SecondSection>
+        <SecondImage>
           <img
-            src={logo2} // Replace with your image URL
-            alt="Our Story"
+            src={logo2}
+            alt="Our second story"
           />
-      </CenterImage>
-
-      </Section>
-
-      {/* Contact Us Section */}
-      <ContactSection>
-        <h1>Contact Us</h1>
-        <ContactButton onClick={() => (window.location.href = '/inquire')}>
-          Inquire Now
-        </ContactButton>
-      </ContactSection>
+        </SecondImage>
+        <ContactBox>
+          <h1>Contact Us</h1>
+          <ContactButton onClick={() => (window.location.href = '/inquire')}>
+            Inquire Now
+          </ContactButton>
+        </ContactBox>
+      </SecondSection>
     </AboutContainer>
   );
 }
