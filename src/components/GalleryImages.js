@@ -56,14 +56,14 @@ const ArrowButton = styled.button`
   font-size: 2rem;
   cursor: pointer;
   z-index: 10;
-  color: #333;
+  color: black;
 
   &:hover {
     color: #555;
   }
 
-  ${({ direction }) => direction === "left" && "left: 2rem;"}
-  ${({ direction }) => direction === "right" && "right: 2rem;"}
+  ${({ direction }) => direction === "left" && "left: 28rem;"}
+  ${({ direction }) => direction === "right" && "right: 28rem;"}
 `;
 
 const GalleryImages = () => {
