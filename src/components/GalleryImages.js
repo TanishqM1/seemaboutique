@@ -48,8 +48,9 @@ const Caption = styled.div`
 `;
 
 const ArrowButton = styled.button`
-  position: fixed;
+  position: absolute;
   top: 50%;
+  margin: 0rem -2rem;
   transform: translateY(-50%);
   background: none;
   border: none;

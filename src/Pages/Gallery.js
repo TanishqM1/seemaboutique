@@ -7,33 +7,18 @@ const PageContainer = styled.div`
   min-height: 80vh;
 `;
 
-const LogoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-
-  img {
-    max-width: 200px;
-    height: auto;
-  }
-`;
-
 const Title = styled.h1`
   text-align: center;
   font-size: 4rem;
   margin-bottom: 2rem;
   font-family: 'Great Vibes', cursive;
-  margin-top: 8rem;
+  margin-top: 2rem;
 `;
 
 const Gallery = () => {
   return (
     <PageContainer>
       {/* Store Logo */}
-      <LogoContainer>
-        {/* uncomment to add logo as desired. */}
-        {/* <img src='' alt="Seema Designer Boutique Logo" /> */}
-      </LogoContainer>
 
       {/* Title */}
       <Title>Highlights</Title>
