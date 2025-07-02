@@ -30,7 +30,7 @@ const ReviewCarouselContainer = styled.div`
 
 const CarouselTitle = styled.h2`
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 2rem;
   font-family: 'Great Vibes', cursive;
 `;
@@ -106,7 +106,7 @@ const Star = styled.span`
 const ButtonContainer = styled.div`
   position: absolute;  // Position buttons relative to CarouselWrapper
   top: 50%;
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);  // Center the buttons vertically
