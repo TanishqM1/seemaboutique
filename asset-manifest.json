@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/seemaboutique/static/js/main.d492b881.js",
+    "main.js": "/seemaboutique/static/js/main.981b9e8b.js",
     "static/media/Gal1.jpg": "/seemaboutique/static/media/Gal1.e9b5f6a5af202d8d93b9.jpg",
     "static/media/Inquire_Gallery.png": "/seemaboutique/static/media/Inquire_Gallery.ec2c4a2bbdef49513ef3.png",
     "static/media/Gal7.JPG": "/seemaboutique/static/media/Gal7.ad24c40721baaab8d951.JPG",
@@ -14,9 +14,9 @@
     "static/media/nav.png": "/seemaboutique/static/media/nav.c5a1e9bff5d5a4469b1f.png",
     "static/media/nihit.png": "/seemaboutique/static/media/nihit.c53945a6dfff9ecb726e.png",
     "index.html": "/seemaboutique/index.html",
-    "main.d492b881.js.map": "/seemaboutique/static/js/main.d492b881.js.map"
+    "main.981b9e8b.js.map": "/seemaboutique/static/js/main.981b9e8b.js.map"
   },
   "entrypoints": [
-    "static/js/main.d492b881.js"
+    "static/js/main.981b9e8b.js"
   ]
 }
