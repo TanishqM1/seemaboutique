@@ -1,7 +1,6 @@
 {
   "name": "seemaboutique",
   "version": "0.1.0",
-  "homepage": "https://TanishqM1.github.io/seemaboutique",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
